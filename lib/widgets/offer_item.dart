@@ -1,51 +1,21 @@
 import 'package:flutter/material.dart';
 
-class ProductCard extends StatelessWidget {
-  final String title;
+class OfferItem extends StatelessWidget {
   final String imageUrl;
-  final VoidCallback onAdd;
+  final String description;
 
-  const ProductCard({
+  const OfferItem({
     super.key,
-    required this.title,
     required this.imageUrl,
-    required this.onAdd,
+    required this.description,
   });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(
-            child: ClipRRect(
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-              child: Image.network(imageUrl, fit: BoxFit.cover),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    title,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-                IconButton(
-                  onPressed: onAdd,
-                  icon: const Icon(Icons.add_shopping_cart),
-                  tooltip: 'Add',
-                ),
-              ],
-            ),
-          ),
-        ],
+      child: ListTile(
+        leading: Image.network(imageUrl, width: 60, fit: BoxFit.cover),
+        title: Text(description),
       ),
     );
   }
