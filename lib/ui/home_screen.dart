@@ -9,39 +9,39 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   List<Map<String, String>> get featured => const [
-    {"img": "https://picsum.photos/800/300?1"},
-    {"img": "https://picsum.photos/800/300?2"},
-    {"img": "https://picsum.photos/800/300?3"},
+    {"img": "images/feature1.jpg"},
+    {"img": "images/feature2.jpg"},
+    {"img": "images/feature3.jpg"},
   ];
 
   List<Map<String, String>> get products => const [
-    {"title": "Shoes", "img": "https://picsum.photos/300/240?10"},
-    {"title": "Bag", "img": "https://picsum.photos/300/240?11"},
-    {"title": "Watch", "img": "https://picsum.photos/300/240?12"},
-    {"title": "Jacket", "img": "https://picsum.photos/300/240?13"},
-    {"title": "Glasses", "img": "https://picsum.photos/300/240?14"},
-    {"title": "Headphones", "img": "https://picsum.photos/300/240?15"}
+    {"title": "Shoes", "img": "images/shoes.jpg"},
+    {"title": "Bag", "img": "images/bag.jpg"},
+    {"title": "Watch", "img": "images/Watch.jpg"},
+    {"title": "Jacket", "img": "images/Jacket.jpg"},
+    {"title": "Glasses", "img": "images/Glasses.jpg"},
+    {"title": "Headphones", "img": "images/Headphones.jpg"}
   ];
 
   List<Map<String, String>> get offers => const [
     {
-      "img": "https://picsum.photos/200/120?21",
+      "img": "images/feature3.jpg",
       "desc": "Offer 1: save more with bundle"
     },
     {
-      "img": "https://picsum.photos/200/120?22",
+      "img": "images/Glasses.jpg",
       "desc": "Offer 2: weekend discount"
     },
     {
-      "img": "https://picsum.photos/200/120?23",
+      "img": "images/shoes.jpg",
       "desc": "Offer 3: limited time"
     },
     {
-      "img": "https://picsum.photos/200/120?24",
+      "img": "images/Headphones.jpg",
       "desc": "Offer 4: buy 1 get 1"
     },
     {
-      "img": "https://picsum.photos/200/120?25",
+      "img": "images/bag.jpg",
       "desc": "Offer 5: clearance sale"
     }
   ];
@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 6),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                  child: Image.network(
+                  child: Image.asset(
                     featured[i]["img"]!,
                     fit: BoxFit.cover,
                   ),

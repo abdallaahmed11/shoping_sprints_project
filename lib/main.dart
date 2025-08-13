@@ -7,7 +7,6 @@ import 'ui/sign_in_screen.dart';
 import 'ui/sign_up_screen.dart';
 import 'ui/home_screen.dart';
 
-// كنترولر بسيط للسويتش بتاع اللغة من أي شاشة
 class LocaleController extends ChangeNotifier {
   LocaleController._();
   static final instance = LocaleController._();
@@ -37,7 +36,6 @@ class AppRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     final localeCtrl = LocaleController.instance;
 
-    // AnimatedBuilder علشان أي تغيير في اللغة يعيد بناء الماتيريال أب
     return AnimatedBuilder(
       animation: localeCtrl,
       builder: (context, _) {
@@ -51,7 +49,6 @@ class AppRoot extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
           ],
-          // لو الجهاز عربي خليه يبدأ عربي
           localeResolutionCallback: (deviceLocale, supported) {
             if (deviceLocale == null) return localeCtrl.locale;
             for (final l in supported) {
@@ -63,7 +60,7 @@ class AppRoot extends StatelessWidget {
           },
           theme: ThemeData(
             primarySwatch: Colors.teal,
-            fontFamily: 'Suwannaphum', // لو مش موجود هياخد الديفولت
+            fontFamily: 'Suwannaphum',
             appBarTheme: const AppBarTheme(
               centerTitle: true,
               backgroundColor: Colors.teal,

@@ -43,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: Image.asset(
-                      'images/imageph1.jpeg', // انت عندك assets: - images/
+                      'images/imageph1.jpeg',
                       width: 140, height: 140, fit: BoxFit.cover,
                     ),
                   ),

@@ -14,7 +14,7 @@ class OfferItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: Image.network(imageUrl, width: 60, fit: BoxFit.cover),
+        leading: Image.asset(imageUrl, width: 60, fit: BoxFit.cover),
         title: Text(description),
       ),
     );
