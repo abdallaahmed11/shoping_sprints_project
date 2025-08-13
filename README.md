@@ -1,4 +1,4 @@
-# shoping_sprintsproject
+# shoping_sprintsp_roject
 
 ## 📌 Overview
 Shopping Sprints is a Flutter-based mobile application that provides an online shopping experience with offers, product listings, and multi-language support. The app includes user authentication, smooth animations, and a clean UI for a seamless user journey.
@@ -17,4 +17,7 @@ Shopping Sprints is a Flutter-based mobile application that provides an online s
 ---
 
 ## 🛠 Setup Instructions
-1. 
+1. **Clone the repository**
+   ```bash
+   git clone https://https://github.com/abdallaahmed11/shoping_sprints_project
+   cd shopping_sprints_project
